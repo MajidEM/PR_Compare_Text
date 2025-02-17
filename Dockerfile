@@ -7,4 +7,4 @@ COPY . /usr/share/nginx/html
 EXPOSE 8000
 
 # Add a volume to persist data
-VOLUME /usr/share/nginx/html
+VOLUME /usr/share/nginx/html021
