@@ -15,7 +15,7 @@ jobs:
 
       - name: Extract branch name
         shell: bash
-        run: echo {{ github.event.pull_request.head.sha }}
+        run: echo "{{ github.event.pull_request.head.sha }}"
           
 
           #git diff origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
