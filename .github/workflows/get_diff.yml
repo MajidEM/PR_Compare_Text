@@ -16,10 +16,9 @@ jobs:
       - name: Compare changes
         shell: bash
         run: |
-          echo "PR Number: $PR_NUMBER"
-          echo "${{ github.base_ref }}"
+          echo "BASE REF: $BASE_REF"
         env:
-          PR_NUMBER: ${{ github.event.number }}
+          BASE_REF: ${{ github.base.ref }}
           #git diff origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
           #if grep -q "FROM.*" diff.txt; then
             #echo "Found 'FROM Directive' in changes."
