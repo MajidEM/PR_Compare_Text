@@ -1,5 +1,5 @@
 name: Print Context
-on: [pull_request]
+on: push
 
 jobs:
   print-context:
@@ -7,5 +7,5 @@ jobs:
     steps:
       - name: Print GitHub context values
         run: |
-          echo "Branch: ${{ github.head_ref }}"
+          echo "Branch: ${{ github.github.ref }}"
           echo "Actor: ${{ github.actor }}"
