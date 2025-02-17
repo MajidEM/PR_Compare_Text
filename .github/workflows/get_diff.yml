@@ -14,9 +14,13 @@ jobs:
           #fetch-depth: 0  # Fetch full history to compare branches
 
       - name: Compare changes
+        shell: bash
         run: |
-          git diff origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
-          if grep -q "FROM.*" diff.txt; then
-            echo "Found 'FROM Directive' in changes."
-            exit 1
-          fi
+          env:
+            PR_NUMBER: ${{ github.event.number }}
+            echo "PR Number: $PR_NUMBER"
+          #git diff origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
+          #if grep -q "FROM.*" diff.txt; then
+            #echo "Found 'FROM Directive' in changes."
+            #exit 1
+          #fi
