@@ -13,12 +13,10 @@ jobs:
         #with:
           #fetch-depth: 0  # Fetch full history to compare branches
 
-      - name: Compare changes
+      - name: Extract branch name
         shell: bash
-        env:
-          HEAD_REF: ${{ github.head_ref }}
-        run: |
-          echo "HEAD REF: $HEAD_REF"
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
 
           #git diff origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
           #if grep -q "FROM.*" diff.txt; then
