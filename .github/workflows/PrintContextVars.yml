@@ -7,5 +7,5 @@ jobs:
     steps:
       - name: Print GitHub context values
         run: |
-          echo "Main Branch: ${{ github.base_ref }}"
+          echo "Main Branch: ${{ github.ref_name }}"
           echo "Feature Branch: ${{ github.head_ref }}"
