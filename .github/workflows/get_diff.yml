@@ -13,7 +13,7 @@ jobs:
       - name: Compare changes
         run: |
           git diff origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
-          if grep -q "TODO" diff.txt; then
-            echo "Found 'TODO' in changes. Please remove it."
+          if grep -q "FROM.*" diff.txt; then
+            echo "Found 'FROM Directive' in changes."
             exit 1
           fi
