@@ -1,0 +1,15 @@
+name: Print Variables
+on: push
+
+env:
+  CUSTOM_ENV_VAR: "Hello, GitHub Actions!"
+
+jobs:
+  print-vars:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print predefined environment variables
+        run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Workflow: $GITHUB_WORKFLOW"
+          echo "Custom Env Var: $CUSTOM_ENV_VAR"
