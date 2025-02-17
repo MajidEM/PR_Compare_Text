@@ -17,6 +17,7 @@ jobs:
         shell: bash
         run: |
           echo "PR Number: $PR_NUMBER"
+          echo "${{ github.base_ref }}"
         env:
           PR_NUMBER: ${{ github.event.number }}
           #git diff origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
