@@ -8,4 +8,4 @@ jobs:
       - name: Print GitHub context values
         run: |
           echo "Main Branch: ${{ github.ref_name }}"
-          echo "Feature Branch: ${{ github.head_ref }}"
+          echo "Feature Branch: ${{ github.ref }}"
