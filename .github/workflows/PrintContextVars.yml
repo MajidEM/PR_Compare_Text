@@ -1,0 +1,14 @@
+name: Print Context
+on: pull_request
+
+jobs:
+  print-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHub context values
+        run: |
+          echo "Main Branch: ${{ github.ref_name }}"
+          echo "Feature Branch: ${{ github.ref }}"
+          echo "Base Ref: ${{ github.base_ref }}"
+          echo "Head Ref: ${{ github.head_ref }}"
+          
