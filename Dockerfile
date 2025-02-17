@@ -1,4 +1,4 @@
-FROM nginx:1.21-alpine3.18-slim
+FROM nginx:1.21-alpine3.11-slim
 
 # Copy everything in the current working directory to the default nginx folder
 COPY . /usr/share/nginx/html
