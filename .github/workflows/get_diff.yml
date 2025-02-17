@@ -1,0 +1,19 @@
+name: PR Text Check
+on: [pull_request]
+
+jobs:
+  check-diff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history to compare branches
+
+      - name: Compare changes
+        run: |
+          git diff origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
+          if grep -q "TODO" diff.txt; then
+            echo "Found 'TODO' in changes. Please remove it."
+            exit 1
+          fi
