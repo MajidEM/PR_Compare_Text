@@ -9,3 +9,6 @@ jobs:
         run: |
           echo "Main Branch: ${{ github.ref_name }}"
           echo "Feature Branch: ${{ github.ref }}"
+          echo "Base Ref: ${{ github.base_ref }}"
+          echo "Head Ref: ${{ github.head_ref }}"
+          
