@@ -15,7 +15,11 @@ jobs:
 
       - name: Extract branch name
         shell: bash
-        sha: {{ github.event.pull_request.head.sha }}
+        SHA: {{ github.event.pull_request.head.sha }}
+        run:
+          | 
+          echo "$SHA"
+          
 
           #git diff origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
           #if grep -q "FROM.*" diff.txt; then
