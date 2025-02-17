@@ -1,6 +1,9 @@
 name: PR Text Check
-on: [pull_request]
 
+on:
+  push:
+    branches:
+      - 'main'    
 jobs:
   check-diff:
     runs-on: ubuntu-latest
