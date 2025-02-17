@@ -4,7 +4,7 @@ FROM nginx:1.25-alpine3.17-slim
 COPY . /usr/share/nginx/html
 
 # Expose port 80 for HTTP traffic
-EXPOSE 8001
+EXPOSE 8003
 
 # Add a volume to persist data
 VOLUME /usr/share/nginx/html021
