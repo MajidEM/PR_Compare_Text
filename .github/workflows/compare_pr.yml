@@ -1,4 +1,4 @@
-name: PR Text Check
+name: Get the Diff in PR
 on: 
   pull_request
 
