@@ -16,6 +16,5 @@ jobs:
           git diff origin/${{ github.base_ref }} origin/${{ github.head_ref }} > diff.txt
           if grep -q "FROM" diff.txt; then
             echo "Found 'FROM' in the PR."
-            python3 ../../get_diff.py diff.txt
-            cat "diff.txt"
+            python3 get_diff.py diff.txt
           fi
