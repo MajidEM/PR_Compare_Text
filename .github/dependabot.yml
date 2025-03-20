@@ -13,3 +13,6 @@ updates:
       # Only allow Python 3.9.x versions
       - dependency-name: "python"
         versions: ["3.9.*"]
+    ignore:
+      - dependency-name: "python"
+        versions: [">= 3.10"]  # Block Python 3.10
