@@ -9,6 +9,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    ignore:
+    allow:
       - dependency-name: "python"
-        versions: ["3.13.*"]  # Block Python 3.13
+        versions: ["3.9.*"]  # Block Python 3.13
