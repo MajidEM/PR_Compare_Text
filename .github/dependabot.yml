@@ -6,9 +6,9 @@
 version: 2
 updates:
   - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    ignore:
-      - dependency-name: "python"
-        versions: ["3.13.*"]
+  directory: "/"
+  schedule:
+    interval: "daily"
+  allow:
+    - dependency-name: "python"
+      versions: ["3.9.*"]
