@@ -11,4 +11,4 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "python"
-        versions: [">= 3.10"]  # Block Python 3.10
+        versions: ["3.10.*,3.11.*,3.12.*,3.13.*"]  # Block Python 3.13
