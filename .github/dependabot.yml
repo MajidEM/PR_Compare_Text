@@ -5,10 +5,11 @@
 
 version: 2
 updates:
-  - package-ecosystem: "docker" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "docker"
+    directory: "/"
     schedule:
       interval: "daily"
     allow:
+      # Only allow Python 3.9.x versions
       - dependency-name: "python"
-        versions: ["^3.9.*"]
+        versions: ["3.9.*"]
