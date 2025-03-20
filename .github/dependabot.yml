@@ -11,4 +11,4 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "python"
-        versions: ["3.10.*", ">= 3.13"]
+        versions: [">3.10.*]
